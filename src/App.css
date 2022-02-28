@@ -1,5 +1,11 @@
+@import "~antd/dist/antd.variable.css";
+
 .App {
   text-align: center;
+  background-image: url("https://nordcloud.com/wp-content/uploads/2021/09/home-hero-scaled.jpg");
+  background-size: cover;
+  min-height: 100vh;
+  box-shadow: inset 0 0 0 2000px rgba(22, 22, 50, 0.6);
 }
 
 .App-logo {
@@ -35,4 +41,8 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.ant-comment-inner {
+  padding: 4px 0;
 }
