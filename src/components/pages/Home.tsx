@@ -1,7 +1,6 @@
 import { Col, Card, Form, Input, Button, Checkbox } from "antd";
 import { FunctionComponent } from "react";
 import axios from "axios";
-import Cookies from "js-cookie";
 import { FullRow } from "../atoms/FullRow";
 import { useNavigate } from "react-router-dom";
 const endpoint = "https://mjw9mobb43.execute-api.us-east-1.amazonaws.com/users";
@@ -13,13 +12,9 @@ export const Home: FunctionComponent<Props> = () => {
 
   const onFinish = async (values: any) => {
     const {
-      data: { token, user },
+      data: { user },
     } = await axios.post(endpoint, values);
 
-    Cookies.set("user", token, {
-      secure: process.env.ENVIRONMENT === "production",
-      sameSite: true,
-    });
     localStorage.setItem("user", JSON.stringify(user));
     navigate("/chat");
   };
