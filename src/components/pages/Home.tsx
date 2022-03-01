@@ -19,12 +19,6 @@ export const Home: FunctionComponent<Props> = () => {
     navigate("/chat");
   };
 
-  const onFinishFailed = (errorInfo: any) => {
-    console.log("Failed:", errorInfo);
-  };
-
-  console.log("called");
-
   return (
     <>
       <FullRow align="middle" justify="center">
@@ -36,7 +30,6 @@ export const Home: FunctionComponent<Props> = () => {
               wrapperCol={{ span: 16 }}
               initialValues={{ remember: true }}
               onFinish={onFinish}
-              onFinishFailed={onFinishFailed}
               autoComplete="off"
             >
               <Form.Item

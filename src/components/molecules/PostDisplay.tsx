@@ -10,18 +10,6 @@ type Props = {
   post: Post;
 };
 
-// const UserText = styled.div`
-//   font-weight: bold;
-//   margin: 0.5rem;
-//   text-align: left;
-//   line-height: 1rem;
-
-//   span {
-//     font-weight: normal;
-//     font-size: 0.7rem;
-//   }
-// `;
-
 export const PostDisplay: FunctionComponent<Props> = ({ post }) => {
   return (
     <Row>
